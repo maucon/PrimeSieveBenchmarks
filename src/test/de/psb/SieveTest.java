@@ -1,14 +1,14 @@
 package de.psb;
 
 import de.psb.sieve.*;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class SieveTest {
 
     private static IPrimeSieve[] primeSieve;
@@ -39,6 +39,7 @@ public class SieveTest {
     }
 
     @Test
+    @Order(1)
     public void EratosthenesSieve() {
         for (int key : primeSieveTest.keySet()) {
             assertEquals((int) primeSieveTest.get(key), primeSieve[0].computePrimes(key).size());
@@ -46,6 +47,7 @@ public class SieveTest {
     }
 
     @Test
+    @Order(3)
     public void EratosthenesSieveCycleOptimized() {
         for (int key : primeSieveTest.keySet()) {
             assertEquals((int) primeSieveTest.get(key), primeSieve[1].computePrimes(key).size());
@@ -53,6 +55,7 @@ public class SieveTest {
     }
 
     @Test
+    @Order(4)
     public void EratosthenesSieveFullOptimized() {
         for (int key : primeSieveTest.keySet()) {
             assertEquals((int) primeSieveTest.get(key), primeSieve[2].computePrimes(key).size());
@@ -60,6 +63,7 @@ public class SieveTest {
     }
 
     @Test
+    @Order(5)
     public void BytePrimeSieveCycleOptimized() {
         for (int key : primeSieveTest.keySet()) {
             assertEquals((int) primeSieveTest.get(key), primeSieve[3].computePrimes(key).size());
@@ -67,6 +71,7 @@ public class SieveTest {
     }
 
     @Test
+    @Order(6)
     public void BytePrimeSieveFullOptimized() {
         for (int key : primeSieveTest.keySet()) {
             assertEquals((int) primeSieveTest.get(key), primeSieve[4].computePrimes(key).size());
