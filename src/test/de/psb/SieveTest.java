@@ -2,13 +2,10 @@ package de.psb;
 
 
 import de.psb.sieve.*;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.RepeatedTest;
+import org.junit.jupiter.api.*;
 
 import java.util.HashMap;
 import java.util.Map;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class SieveTest {
 
@@ -41,32 +38,61 @@ public class SieveTest {
         primeSieveTest.put(Integer.MAX_VALUE - 3, 105097564);
     }
 
-    @RepeatedTest(3)
-    public void testEratosthenesSieve() {
-        for (int key : primeSieveTest.keySet()) {
-            assertEquals((int) primeSieveTest.get(key), primeSieve[0].computePrimes(key).size());
+//    @RepeatedTest(3)
+//    public void testEratosthenesSieve() {
+//        for (int key : primeSieveTest.keySet()) {
+//            assertEquals((int) primeSieveTest.get(key), primeSieve[0].computePrimes(key).size());
+//        }
+//    }
+//
+//    @RepeatedTest(3)
+//    public void testEratosthenesSieveCycleOptimized() {
+//        for (int key : primeSieveTest.keySet()) {
+//            assertEquals((int) primeSieveTest.get(key), primeSieve[1].computePrimes(key).size());
+//        }
+//    }
+//
+//    @RepeatedTest(3)
+//    public void testEratosthenesSieveFullOptimized() {
+//        for (int key : primeSieveTest.keySet()) {
+//            assertEquals((int) primeSieveTest.get(key), primeSieve[2].computePrimes(key).size());
+//        }
+//    }
+//
+//    @RepeatedTest(3)
+//    public void testBytePrimeSieveFullOptimized() {
+//        for (int key : primeSieveTest.keySet()) {
+//            assertEquals((int) primeSieveTest.get(key), primeSieve[3].computePrimes(key).size());
+//        }
+//    }
+
+    @Nested
+    @DisplayName("Tests with Small numbers (10000)")
+    class Small {
+
+        private static final int limit = 10_000;
+
+        @RepeatedTest(5)
+        public void testEratosthenesSieve() {
+            Assertions.assertEquals((int) primeSieveTest.get(limit), primeSieve[0].computePrimes(limit).size());
+        }
+
+        @RepeatedTest(5)
+        public void testEratosthenesSieveCycleOptimized() {
+            Assertions.assertEquals((int) primeSieveTest.get(limit), primeSieve[1].computePrimes(limit).size());
+
+        }
+
+        @RepeatedTest(5)
+        public void testEratosthenesSieveFullOptimized() {
+            Assertions.assertEquals((int) primeSieveTest.get(limit), primeSieve[2].computePrimes(limit).size());
+
+        }
+
+        @RepeatedTest(5)
+        public void testBytePrimeSieveFullOptimized() {
+            Assertions.assertEquals((int) primeSieveTest.get(limit), primeSieve[3].computePrimes(limit).size());
+
         }
     }
-
-    @RepeatedTest(3)
-    public void testEratosthenesSieveCycleOptimized() {
-        for (int key : primeSieveTest.keySet()) {
-            assertEquals((int) primeSieveTest.get(key), primeSieve[1].computePrimes(key).size());
-        }
-    }
-
-    @RepeatedTest(3)
-    public void testEratosthenesSieveFullOptimized() {
-        for (int key : primeSieveTest.keySet()) {
-            assertEquals((int) primeSieveTest.get(key), primeSieve[2].computePrimes(key).size());
-        }
-    }
-
-    @RepeatedTest(3)
-    public void testBytePrimeSieveFullOptimized() {
-        for (int key : primeSieveTest.keySet()) {
-            assertEquals((int) primeSieveTest.get(key), primeSieve[3].computePrimes(key).size());
-        }
-    }
-
 }
