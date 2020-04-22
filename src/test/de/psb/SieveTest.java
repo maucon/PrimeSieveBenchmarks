@@ -40,7 +40,7 @@ public class SieveTest {
     }
 
     @Nested
-    @DisplayName("Tests with Small numbers (10000)")
+    @DisplayName("Tests with small numbers (10000)")
     class Small {
 
         private static final int limit = 10_000;
@@ -72,7 +72,7 @@ public class SieveTest {
     }
 
     @Nested
-    @DisplayName("Tests with Small numbers (100_000_000)")
+    @DisplayName("Tests with medium numbers (100_000_000)")
     class Medium {
 
         private static final int limit = 100_000_000;
@@ -104,7 +104,7 @@ public class SieveTest {
     }
 
     @Nested
-    @DisplayName("Tests with Small numbers (Integer.MAX_VALUE - 3)")
+    @DisplayName("Tests with big numbers (Integer.MAX_VALUE - 3)")
     class Large {
 
         private static final int limit = Integer.MAX_VALUE - 3;
