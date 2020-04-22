@@ -35,33 +35,36 @@ public class SieveTest {
         primeSieveTest.put(1_000_000, 78498);
         primeSieveTest.put(10_000_000, 664579);
         primeSieveTest.put(100_000_000, 5761455);
+//        primeSieveTest.put(1_000_000_000, 50847534);
+//        primeSieveTest.put(2_000_000_000, 98222287);
+        primeSieveTest.put(Integer.MAX_VALUE - 5, 98222287);
     }
 
     @Test
     public void testEratosthenesSieve() {
         for (int key : primeSieveTest.keySet()) {
-            Assertions.assertEquals(primeSieve[0].computePrimes(key).size(), (int) primeSieveTest.get(key));
+            Assertions.assertEquals((int) primeSieveTest.get(key), primeSieve[0].computePrimes(key).size());
         }
     }
 
     @Test
     public void testEratosthenesSieveCycleOptimized() {
         for (int key : primeSieveTest.keySet()) {
-            Assertions.assertEquals(primeSieve[1].computePrimes(key).size(), (int) primeSieveTest.get(key));
+            Assertions.assertEquals((int) primeSieveTest.get(key), primeSieve[1].computePrimes(key).size());
         }
     }
 
     @Test
     public void testEratosthenesSieveFullOptimized() {
         for (int key : primeSieveTest.keySet()) {
-            Assertions.assertEquals(primeSieve[2].computePrimes(key).size(), (int) primeSieveTest.get(key));
+            Assertions.assertEquals((int) primeSieveTest.get(key), primeSieve[2].computePrimes(key).size());
         }
     }
 
     @Test
     public void testBytePrimeSieveFullOptimized() {
         for (int key : primeSieveTest.keySet()) {
-            Assertions.assertEquals(primeSieve[3].computePrimes(key).size(), (int) primeSieveTest.get(key));
+            Assertions.assertEquals((int) primeSieveTest.get(key), primeSieve[3].computePrimes(key).size());
         }
     }
 

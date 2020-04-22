@@ -17,8 +17,8 @@ public class EratosthenesSieveCycleOptimized implements IPrimeSieve {
         for (int i = 3; i <= sqrt; i += 2)
             if (!sieve[i]) {
                 primeList.add(i);
-                for (int j = i * i; j <= limit; j += i << 1)
-                    sieve[j] = true;
+                for (long j = i * i; j <= limit; j += i << 1)
+                    sieve[(int) j] = true;
             }
 
         for (int i = (sqrt & 1) == 0 ? sqrt + 1 : sqrt + 2; i <= limit; i += 2)

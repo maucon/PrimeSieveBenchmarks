@@ -17,8 +17,8 @@ public class EratosthenesSieveFullOptimized implements IPrimeSieve {
         for (int i = 3; i <= sqrt; i += 2)
             if (!sieve[i / 2]) {
                 primeList.add(i);
-                for (int j = i * i; j <= limit; j += i << 1)
-                    sieve[j / 2] = true;
+                for (long j = i * i; j <= limit; j += i << 1)
+                    sieve[(int) (j / 2)] = true;
             }
 
         for (int i = (sqrt & 1) == 0 ? sqrt + 1 : sqrt + 2; i <= limit; i += 2)

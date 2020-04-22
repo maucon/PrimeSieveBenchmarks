@@ -12,8 +12,8 @@ public class EratosthenesSieve implements IPrimeSieve {
 
         for (int i = 0; i * i <= limit; i++)
             if (!sieve[i])
-                for (int j = i * 2; j <= limit; j += i)
-                    sieve[j] = true;
+                for (long j = i * 2; j <= limit; j += i)
+                    sieve[(int) j] = true;
 
         List<Integer> primeList = new ArrayList<>();
 
