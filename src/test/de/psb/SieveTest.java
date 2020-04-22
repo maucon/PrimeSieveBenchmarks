@@ -39,7 +39,7 @@ public class SieveTest {
     }
 
     @Test
-    @Order(1)
+    @Order(0)
     public void EratosthenesSieve() {
         for (int key : primeSieveTest.keySet()) {
             assertEquals((int) primeSieveTest.get(key), primeSieve[0].computePrimes(key).size());
@@ -47,7 +47,7 @@ public class SieveTest {
     }
 
     @Test
-    @Order(3)
+    @Order(1)
     public void EratosthenesSieveCycleOptimized() {
         for (int key : primeSieveTest.keySet()) {
             assertEquals((int) primeSieveTest.get(key), primeSieve[1].computePrimes(key).size());
@@ -55,7 +55,7 @@ public class SieveTest {
     }
 
     @Test
-    @Order(4)
+    @Order(2)
     public void EratosthenesSieveFullOptimized() {
         for (int key : primeSieveTest.keySet()) {
             assertEquals((int) primeSieveTest.get(key), primeSieve[2].computePrimes(key).size());
@@ -63,7 +63,7 @@ public class SieveTest {
     }
 
     @Test
-    @Order(5)
+    @Order(3)
     public void BytePrimeSieveCycleOptimized() {
         for (int key : primeSieveTest.keySet()) {
             assertEquals((int) primeSieveTest.get(key), primeSieve[3].computePrimes(key).size());
@@ -71,7 +71,7 @@ public class SieveTest {
     }
 
     @Test
-    @Order(6)
+    @Order(4)
     public void BytePrimeSieveFullOptimized() {
         for (int key : primeSieveTest.keySet()) {
             assertEquals((int) primeSieveTest.get(key), primeSieve[4].computePrimes(key).size());
