@@ -61,7 +61,7 @@ public class Benchmark {
 
         @Order(2)
         @RepeatedTest(5)
-        public void EratosthenesSieveFullOptimized() {
+        public void EratosthenesSieveMemoryOptimized() {
             assertEquals((int) primeSieveTest.get(limit), primeSieve[2].computePrimes(limit).size());
         }
 
@@ -73,7 +73,7 @@ public class Benchmark {
 
         @Order(4)
         @RepeatedTest(5)
-        public void BytePrimeSieveFullOptimized() {
+        public void BytePrimeSieveMemoryOptimized() {
             assertEquals((int) primeSieveTest.get(limit), primeSieve[4].computePrimes(limit).size());
         }
 
@@ -100,7 +100,7 @@ public class Benchmark {
 
         @Order(2)
         @RepeatedTest(5)
-        public void EratosthenesSieveFullOptimized() {
+        public void EratosthenesSieveMemoryOptimized() {
             assertEquals((int) primeSieveTest.get(limit), primeSieve[2].computePrimes(limit).size());
         }
 
@@ -112,7 +112,7 @@ public class Benchmark {
 
         @Order(4)
         @RepeatedTest(5)
-        public void BytePrimeSieveFullOptimized() {
+        public void BytePrimeSieveMemoryOptimized() {
             assertEquals((int) primeSieveTest.get(limit), primeSieve[4].computePrimes(limit).size());
         }
 
@@ -139,7 +139,7 @@ public class Benchmark {
 
         @Order(2)
         @RepeatedTest(5)
-        public void EratosthenesSieveFullOptimized() {
+        public void EratosthenesSieveMemoryOptimized() {
             assertEquals((int) primeSieveTest.get(limit), primeSieve[2].computePrimes(limit).size());
         }
 
@@ -151,7 +151,7 @@ public class Benchmark {
 
         @Order(4)
         @RepeatedTest(5)
-        public void BytePrimeSieveFullOptimized() {
+        public void BytePrimeSieveMemoryOptimized() {
             assertEquals((int) primeSieveTest.get(limit), primeSieve[4].computePrimes(limit).size());
         }
 

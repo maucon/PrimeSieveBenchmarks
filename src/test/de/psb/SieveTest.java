@@ -56,7 +56,7 @@ public class SieveTest {
 
     @Test
     @Order(2)
-    public void EratosthenesSieveFullOptimized() {
+    public void EratosthenesSieveMemoryOptimized() {
         for (int key : primeSieveTest.keySet()) {
             assertEquals((int) primeSieveTest.get(key), primeSieve[2].computePrimes(key).size());
         }
@@ -72,7 +72,7 @@ public class SieveTest {
 
     @Test
     @Order(4)
-    public void BytePrimeSieveFullOptimized() {
+    public void BytePrimeSieveMemoryOptimized() {
         for (int key : primeSieveTest.keySet()) {
             assertEquals((int) primeSieveTest.get(key), primeSieve[4].computePrimes(key).size());
         }
