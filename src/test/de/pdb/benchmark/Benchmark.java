@@ -1,4 +1,4 @@
-package de.psb.benchmark;
+package de.pdb.benchmark;
 
 public class Benchmark {
 }

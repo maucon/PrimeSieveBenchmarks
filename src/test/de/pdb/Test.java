@@ -1,4 +1,4 @@
-package de.psb.test;
+package de.pdb;
 
 
 import de.psb.sieve.*;
