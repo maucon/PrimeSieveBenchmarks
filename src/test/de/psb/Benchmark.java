@@ -47,27 +47,27 @@ public class Benchmark {
         private static final int limit = 10_000;
 
         @RepeatedTest(5)
-        public void testEratosthenesSieve() {
+        public void EratosthenesSieve() {
             assertEquals((int) primeSieveTest.get(limit), primeSieve[0].computePrimes(limit).size());
         }
 
         @RepeatedTest(5)
-        public void testEratosthenesSieveCycleOptimized() {
+        public void EratosthenesSieveCycleOptimized() {
             assertEquals((int) primeSieveTest.get(limit), primeSieve[1].computePrimes(limit).size());
         }
 
         @RepeatedTest(5)
-        public void testEratosthenesSieveFullOptimized() {
+        public void EratosthenesSieveFullOptimized() {
             assertEquals((int) primeSieveTest.get(limit), primeSieve[2].computePrimes(limit).size());
         }
 
         @RepeatedTest(5)
-        public void testBytePrimeSieveCycleOptimized() {
+        public void BytePrimeSieveCycleOptimized() {
             assertEquals((int) primeSieveTest.get(limit), primeSieve[3].computePrimes(limit).size());
         }
 
         @RepeatedTest(5)
-        public void testBytePrimeSieveFullOptimized() {
+        public void BytePrimeSieveFullOptimized() {
             assertEquals((int) primeSieveTest.get(limit), primeSieve[4].computePrimes(limit).size());
         }
 
@@ -80,27 +80,27 @@ public class Benchmark {
         private static final int limit = 100_000_000;
 
         @RepeatedTest(5)
-        public void testEratosthenesSieve() {
+        public void EratosthenesSieve() {
             assertEquals((int) primeSieveTest.get(limit), primeSieve[0].computePrimes(limit).size());
         }
 
         @RepeatedTest(5)
-        public void testEratosthenesSieveCycleOptimized() {
+        public void EratosthenesSieveCycleOptimized() {
             assertEquals((int) primeSieveTest.get(limit), primeSieve[1].computePrimes(limit).size());
         }
 
         @RepeatedTest(5)
-        public void testEratosthenesSieveFullOptimized() {
+        public void EratosthenesSieveFullOptimized() {
             assertEquals((int) primeSieveTest.get(limit), primeSieve[2].computePrimes(limit).size());
         }
 
         @RepeatedTest(5)
-        public void testBytePrimeSieveCycleOptimized() {
+        public void BytePrimeSieveCycleOptimized() {
             assertEquals((int) primeSieveTest.get(limit), primeSieve[3].computePrimes(limit).size());
         }
 
         @RepeatedTest(5)
-        public void testBytePrimeSieveFullOptimized() {
+        public void BytePrimeSieveFullOptimized() {
             assertEquals((int) primeSieveTest.get(limit), primeSieve[4].computePrimes(limit).size());
         }
 
@@ -114,27 +114,27 @@ public class Benchmark {
         private static final int limit = Integer.MAX_VALUE - 3;
 
         @RepeatedTest(5)
-        public void testEratosthenesSieve() {
+        public void EratosthenesSieve() {
             assertEquals((int) primeSieveTest.get(limit), primeSieve[0].computePrimes(limit).size());
         }
 
         @RepeatedTest(5)
-        public void testEratosthenesSieveCycleOptimized() {
+        public void EratosthenesSieveCycleOptimized() {
             assertEquals((int) primeSieveTest.get(limit), primeSieve[1].computePrimes(limit).size());
         }
 
         @RepeatedTest(5)
-        public void testEratosthenesSieveFullOptimized() {
+        public void EratosthenesSieveFullOptimized() {
             assertEquals((int) primeSieveTest.get(limit), primeSieve[2].computePrimes(limit).size());
         }
 
         @RepeatedTest(5)
-        public void testBytePrimeSieveCycleOptimized() {
+        public void BytePrimeSieveCycleOptimized() {
             assertEquals((int) primeSieveTest.get(limit), primeSieve[3].computePrimes(limit).size());
         }
 
         @RepeatedTest(5)
-        public void testBytePrimeSieveFullOptimized() {
+        public void BytePrimeSieveFullOptimized() {
             assertEquals((int) primeSieveTest.get(limit), primeSieve[4].computePrimes(limit).size());
         }
 
