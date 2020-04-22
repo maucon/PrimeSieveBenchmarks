@@ -103,6 +103,8 @@ public class SieveTest {
         }
     }
 
+
+    @Disabled
     @Nested
     @DisplayName("Tests with big numbers (Integer.MAX_VALUE - 3)")
     class Large {
