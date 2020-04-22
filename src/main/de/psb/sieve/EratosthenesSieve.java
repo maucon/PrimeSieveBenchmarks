@@ -13,7 +13,7 @@ public class EratosthenesSieve implements IPrimeSieve {
         int sqrt = (int) Math.sqrt(limit);
         for (int i = 0; i <= sqrt; i++)
             if (!sieve[i])
-                for (long j = i << 1; j <= limit; j += i)
+                for (long j = i * 2; j <= limit; j += i)
                     sieve[(int) j] = true;
 
         List<Integer> primeList = new ArrayList<>();
