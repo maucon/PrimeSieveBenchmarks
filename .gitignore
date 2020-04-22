@@ -11,3 +11,4 @@
 PrimeSieveBenchmarks.iml
 build/
 .gradle/
+!.idea/PrimeSieveBenchmarks.iml
