@@ -14,7 +14,7 @@ public class Benchmark {
     private static Map<Integer, Integer> primeSieveTest;
 
     @BeforeAll
-    static void initialize() {
+    public static void initialize() {
         primeSieve = new IPrimeSieve[]{
                 new EratosthenesSieve(),
                 new EratosthenesSieveCycleOptimized(),
@@ -38,6 +38,11 @@ public class Benchmark {
         primeSieveTest.put(1_000_000_000, 50847534);
         primeSieveTest.put(2_000_000_000, 98222287);
         primeSieveTest.put(Integer.MAX_VALUE - 3, 105097564);
+    }
+
+    @AfterEach
+    public void garbageCollect() {
+        System.gc();
     }
 
     @Nested
