@@ -1,4 +1,4 @@
-package de.psb.benchmark;
+package de.psb;
 
 import de.psb.sieve.*;
 import org.junit.jupiter.api.*;
