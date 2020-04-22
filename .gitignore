@@ -13,3 +13,4 @@ build/
 .gradle/
 !.idea/PrimeSieveBenchmarks.iml
 !.idea/libraries/lib.xml
+/test-results/

@@ -29,3 +29,5 @@ public class BytePrimeSieveCycleOptimized implements IPrimeSieve {
     }
 
 }
+// MemoryUsage (array only)     : (limit/8+1)/1000000 MB
+// Example (Integer.MAX_VALUE-3): 268,4 MB -> 0,3 GB

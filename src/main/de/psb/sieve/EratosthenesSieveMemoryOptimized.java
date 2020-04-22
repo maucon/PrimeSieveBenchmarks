@@ -29,3 +29,5 @@ public class EratosthenesSieveMemoryOptimized implements IPrimeSieve {
     }
 
 }
+// MemoryUsage (array only)     : (limit/2+1)/1000000 MB
+// Example (Integer.MAX_VALUE-3): 1074,7 MB -> 1,1 GB
