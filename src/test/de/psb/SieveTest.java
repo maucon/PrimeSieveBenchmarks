@@ -11,11 +11,11 @@ import java.util.Map;
 
 public class SieveTest {
 
-    private IPrimeSieve[] primeSieve;
-    private Map<Integer, Integer> primeSieveTest;
+    private static IPrimeSieve[] primeSieve;
+    private static Map<Integer, Integer> primeSieveTest;
 
     @BeforeAll
-    public void initialize() {
+    static void initialize() {
         primeSieve = new IPrimeSieve[]{
                 new EratosthenesSieve(),
                 new EratosthenesSieveCycleOptimized(),
