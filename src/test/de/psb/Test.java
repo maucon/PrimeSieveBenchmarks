@@ -36,7 +36,7 @@ public class Test {
 
     public void testEratosthenesSieve() {
         for (int key : primeSieveTest.keySet()) {
-            //Assert.assertEquals(primeSieve[0].computePrimes(key).size(), (int) primeSieveTest.get(key));
+//            Assert.assertEquals(primeSieve[0].computePrimes(key).size(), (int) primeSieveTest.get(key));
         }
     }
 
