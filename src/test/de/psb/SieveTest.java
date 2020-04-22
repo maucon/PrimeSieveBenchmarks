@@ -34,44 +34,80 @@ public class SieveTest {
         primeSieveTest.put(1_000_000, 78498);
         primeSieveTest.put(10_000_000, 664579);
         primeSieveTest.put(100_000_000, 5761455);
-//        primeSieveTest.put(1_000_000_000, 50847534);
-//        primeSieveTest.put(2_000_000_000, 98222287);
+        primeSieveTest.put(1_000_000_000, 50847534);
+        primeSieveTest.put(2_000_000_000, 98222287);
         primeSieveTest.put(Integer.MAX_VALUE - 3, 105097564);
     }
-
-//    @RepeatedTest(3)
-//    public void testEratosthenesSieve() {
-//        for (int key : primeSieveTest.keySet()) {
-//            assertEquals((int) primeSieveTest.get(key), primeSieve[0].computePrimes(key).size());
-//        }
-//    }
-//
-//    @RepeatedTest(3)
-//    public void testEratosthenesSieveCycleOptimized() {
-//        for (int key : primeSieveTest.keySet()) {
-//            assertEquals((int) primeSieveTest.get(key), primeSieve[1].computePrimes(key).size());
-//        }
-//    }
-//
-//    @RepeatedTest(3)
-//    public void testEratosthenesSieveFullOptimized() {
-//        for (int key : primeSieveTest.keySet()) {
-//            assertEquals((int) primeSieveTest.get(key), primeSieve[2].computePrimes(key).size());
-//        }
-//    }
-//
-//    @RepeatedTest(3)
-//    public void testBytePrimeSieveFullOptimized() {
-//        for (int key : primeSieveTest.keySet()) {
-//            assertEquals((int) primeSieveTest.get(key), primeSieve[3].computePrimes(key).size());
-//        }
-//    }
 
     @Nested
     @DisplayName("Tests with Small numbers (10000)")
     class Small {
 
         private static final int limit = 10_000;
+
+        @RepeatedTest(5)
+        public void testEratosthenesSieve() {
+            Assertions.assertEquals((int) primeSieveTest.get(limit), primeSieve[0].computePrimes(limit).size());
+        }
+
+        @RepeatedTest(5)
+        public void testEratosthenesSieveCycleOptimized() {
+            Assertions.assertEquals((int) primeSieveTest.get(limit), primeSieve[1].computePrimes(limit).size());
+        }
+
+        @RepeatedTest(5)
+        public void testEratosthenesSieveFullOptimized() {
+            Assertions.assertEquals((int) primeSieveTest.get(limit), primeSieve[2].computePrimes(limit).size());
+        }
+
+        @RepeatedTest(5)
+        public void testBytePrimeSieveFullOptimized() {
+            Assertions.assertEquals((int) primeSieveTest.get(limit), primeSieve[3].computePrimes(limit).size());
+        }
+
+        @RepeatedTest(5)
+        public void testBytePrimeSieveCycleOptimized() {
+            Assertions.assertEquals((int) primeSieveTest.get(limit), primeSieve[4].computePrimes(limit).size());
+        }
+    }
+
+    @Nested
+    @DisplayName("Tests with Small numbers (100_000_000)")
+    class Medium {
+
+        private static final int limit = 100_000_000;
+
+        @RepeatedTest(5)
+        public void testEratosthenesSieve() {
+            Assertions.assertEquals((int) primeSieveTest.get(limit), primeSieve[0].computePrimes(limit).size());
+        }
+
+        @RepeatedTest(5)
+        public void testEratosthenesSieveCycleOptimized() {
+            Assertions.assertEquals((int) primeSieveTest.get(limit), primeSieve[1].computePrimes(limit).size());
+        }
+
+        @RepeatedTest(5)
+        public void testEratosthenesSieveFullOptimized() {
+            Assertions.assertEquals((int) primeSieveTest.get(limit), primeSieve[2].computePrimes(limit).size());
+        }
+
+        @RepeatedTest(5)
+        public void testBytePrimeSieveFullOptimized() {
+            Assertions.assertEquals((int) primeSieveTest.get(limit), primeSieve[3].computePrimes(limit).size());
+        }
+
+        @RepeatedTest(5)
+        public void testBytePrimeSieveCycleOptimized() {
+            Assertions.assertEquals((int) primeSieveTest.get(limit), primeSieve[4].computePrimes(limit).size());
+        }
+    }
+
+    @Nested
+    @DisplayName("Tests with Small numbers (Integer.MAX_VALUE - 3)")
+    class Large {
+
+        private static final int limit = Integer.MAX_VALUE - 3;
 
         @RepeatedTest(5)
         public void testEratosthenesSieve() {
