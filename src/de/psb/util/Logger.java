@@ -18,14 +18,9 @@ public class Logger {
         Logger.color = color;
     }
 
-    public static void log(String... strings) {
-        for (String msg : strings) {
-            System.out.println(color + msg);
-        }
-    }
-
-    public static void log(long... strings) {
-        for (long msg : strings) {
+    @SafeVarargs
+    public static <T> void log(T... t) {
+        for (T msg : t) {
             System.out.println(color + msg);
         }
     }
