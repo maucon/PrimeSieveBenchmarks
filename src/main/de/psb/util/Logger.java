@@ -28,9 +28,9 @@ public class Logger {
     public static void logTime(long nanoseconds) {
         System.out.println(
                 color +
-                        String.format("%02d", nanoseconds / 60_000_000_000L) + ":" +
-                        String.format("%02d", nanoseconds / 1_000_000_000) + "." +
-                        String.format("%09d", nanoseconds % 1_000_000_000)
+                String.format("%02d", nanoseconds / 60_000_000_000L) + ":" +
+                String.format("%02d", nanoseconds / 1_000_000_000) + "." +
+                String.format("%09d", nanoseconds % 1_000_000_000)
         );
     }
 
