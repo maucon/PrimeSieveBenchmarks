@@ -37,7 +37,7 @@ public class SieveTest {
         primeSieveTest.put(100_000_000, 5761455);
 //        primeSieveTest.put(1_000_000_000, 50847534);
 //        primeSieveTest.put(2_000_000_000, 98222287);
-        primeSieveTest.put(Integer.MAX_VALUE - 5, 105097564);
+        primeSieveTest.put(Integer.MAX_VALUE - 3, 105097564);
     }
 
     @Test
