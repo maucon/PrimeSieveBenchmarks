@@ -41,7 +41,7 @@ public class Benchmark {
     }
 
     @Nested
-    @DisplayName("Tests with small numbers (10000)")
+    @DisplayName("Tests with small numbers (10.000)")
     class Small {
 
         private static final int limit = 10_000;
@@ -73,7 +73,7 @@ public class Benchmark {
     }
 
     @Nested
-    @DisplayName("Tests with medium numbers (100_000_000)")
+    @DisplayName("Tests with medium numbers (100.000.000)")
     class Medium {
 
         private static final int limit = 100_000_000;
