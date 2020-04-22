@@ -38,35 +38,35 @@ public class SieveTest {
         primeSieveTest.put(100_000_000,   5761455);
     }
 
-    @Test()
+    @Test
     public void testEratosthenesSieve() {
         for (int key : primeSieveTest.keySet()) {
             assertEquals((int) primeSieveTest.get(key), primeSieve[0].computePrimes(key).size());
         }
     }
 
-    @Test()
+    @Test
     public void testEratosthenesSieveCycleOptimized() {
         for (int key : primeSieveTest.keySet()) {
             assertEquals((int) primeSieveTest.get(key), primeSieve[1].computePrimes(key).size());
         }
     }
 
-    @Test()
+    @Test
     public void testEratosthenesSieveFullOptimized() {
         for (int key : primeSieveTest.keySet()) {
             assertEquals((int) primeSieveTest.get(key), primeSieve[2].computePrimes(key).size());
         }
     }
 
-    @Test()
+    @Test
     public void testBytePrimeSieveFullOptimized() {
         for (int key : primeSieveTest.keySet()) {
             assertEquals((int) primeSieveTest.get(key), primeSieve[3].computePrimes(key).size());
         }
     }
 
-    @Test()
+    @Test
     public void testBytePrimeSieveCycleOptimized() {
         for (int key : primeSieveTest.keySet()) {
             assertEquals((int) primeSieveTest.get(key), primeSieve[4].computePrimes(key).size());
