@@ -18,9 +18,9 @@ public class Benchmark {
         primeSieve = new IPrimeSieve[]{
                 new EratosthenesSieve(),
                 new EratosthenesSieveCycleOptimized(),
-                new EratosthenesSieveFullOptimized(),
+                new EratosthenesSieveMemoryOptimized(),
                 new BytePrimeSieveCycleOptimized(),
-                new BytePrimeSieveFullOptimized(),
+                new BytePrimeSieveMemoryOptimized(),
         };
 
         primeSieveTest = new HashMap<>();
@@ -106,7 +106,6 @@ public class Benchmark {
 
     }
 
-    @Disabled
     @Nested
     @DisplayName("Tests with big numbers (Integer.MAX_VALUE - 3)")
     class Large {
