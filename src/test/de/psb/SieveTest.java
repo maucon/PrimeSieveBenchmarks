@@ -20,8 +20,8 @@ public class SieveTest {
                 new EratosthenesSieve(),
                 new EratosthenesSieveCycleOptimized(),
                 new EratosthenesSieveMemoryOptimized(),
-                new BytePrimeSieveCycleOptimized(),
-                new BytePrimeSieveMemoryOptimized(),
+                new EratosthenesBytePrimeSieveCycleOptimized(),
+                new EratosthenesBytePrimeSieveMemoryOptimized(),
         };
 
         primeSieveTest = new HashMap<>();
@@ -64,7 +64,7 @@ public class SieveTest {
 
     @Test
     @Order(3)
-    public void BytePrimeSieveCycleOptimized() {
+    public void EratosthenesBytePrimeSieveCycleOptimized() {
         for (int key : primeSieveTest.keySet()) {
             assertEquals((int) primeSieveTest.get(key), primeSieve[3].computePrimes(key).size());
         }
@@ -72,7 +72,7 @@ public class SieveTest {
 
     @Test
     @Order(4)
-    public void BytePrimeSieveMemoryOptimized() {
+    public void EratosthenesBytePrimeSieveMemoryOptimized() {
         for (int key : primeSieveTest.keySet()) {
             assertEquals((int) primeSieveTest.get(key), primeSieve[4].computePrimes(key).size());
         }

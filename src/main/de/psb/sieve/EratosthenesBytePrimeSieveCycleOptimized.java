@@ -3,7 +3,7 @@ package de.psb.sieve;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BytePrimeSieveCycleOptimized implements IPrimeSieve {
+public class EratosthenesBytePrimeSieveCycleOptimized implements IPrimeSieve {
 
     @Override
     public List<Integer> computePrimes(int limit) {

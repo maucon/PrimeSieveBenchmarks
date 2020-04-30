@@ -19,8 +19,8 @@ public class Benchmark {
                 new EratosthenesSieve(),
                 new EratosthenesSieveCycleOptimized(),
                 new EratosthenesSieveMemoryOptimized(),
-                new BytePrimeSieveCycleOptimized(),
-                new BytePrimeSieveMemoryOptimized(),
+                new EratosthenesBytePrimeSieveCycleOptimized(),
+                new EratosthenesBytePrimeSieveMemoryOptimized(),
         };
 
         primeSieveTest = new HashMap<>();
@@ -72,13 +72,13 @@ public class Benchmark {
 
         @Order(3)
         @RepeatedTest(5)
-        public void BytePrimeSieveCycleOptimized() {
+        public void EratosthenesBytePrimeSieveCycleOptimized() {
             assertEquals((int) primeSieveTest.get(limit), primeSieve[3].computePrimes(limit).size());
         }
 
         @Order(4)
         @RepeatedTest(5)
-        public void BytePrimeSieveMemoryOptimized() {
+        public void EratosthenesBytePrimeSieveMemoryOptimized() {
             assertEquals((int) primeSieveTest.get(limit), primeSieve[4].computePrimes(limit).size());
         }
 
@@ -111,13 +111,13 @@ public class Benchmark {
 
         @Order(3)
         @RepeatedTest(5)
-        public void BytePrimeSieveCycleOptimized() {
+        public void EratosthenesBytePrimeSieveCycleOptimized() {
             assertEquals((int) primeSieveTest.get(limit), primeSieve[3].computePrimes(limit).size());
         }
 
         @Order(4)
         @RepeatedTest(5)
-        public void BytePrimeSieveMemoryOptimized() {
+        public void EratosthenesBytePrimeSieveMemoryOptimized() {
             assertEquals((int) primeSieveTest.get(limit), primeSieve[4].computePrimes(limit).size());
         }
 
@@ -150,13 +150,13 @@ public class Benchmark {
 
         @Order(3)
         @RepeatedTest(5)
-        public void BytePrimeSieveCycleOptimized() {
+        public void EratosthenesBytePrimeSieveCycleOptimized() {
             assertEquals((int) primeSieveTest.get(limit), primeSieve[3].computePrimes(limit).size());
         }
 
         @Order(4)
         @RepeatedTest(5)
-        public void BytePrimeSieveMemoryOptimized() {
+        public void EratosthenesBytePrimeSieveMemoryOptimized() {
             assertEquals((int) primeSieveTest.get(limit), primeSieve[4].computePrimes(limit).size());
         }
 
